@@ -1,0 +1,30 @@
+<br><br><br><br>
+<div class="container">
+<div class="row">
+
+    <table class="table mx-auto">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Email</th>
+        <th>Endereco</th>
+        <th>Cidade</th>
+        <th>Estado</th>
+        <th>CEP</th>
+      </tr>
+    </thead>
+    <tbody>
+
+          <td><div *ngFor="let cliente of clientes">{{cliente.nome}}</div></td>
+          <td><div *ngFor="let cliente of clientes">{{cliente.sobrenome}}</div></td>
+          <td><div *ngFor="let cliente of clientes">{{cliente.email}}</div></td>
+          <td><div *ngFor="let cliente of clientes">{{cliente.endereco}}</div></td>
+          <td><div *ngFor="let cliente of clientes">{{cliente.cidade}}</div></td>
+          <td><div *ngFor="let cliente of clientes">{{cliente.estado}}</div></td>
+          <td><div *ngFor="let cliente of clientes">{{cliente.cep}}</div></td>
+
+    </tbody>
+  </table>
+</div>
+</div>

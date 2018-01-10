@@ -9,8 +9,15 @@
       <li class="nav-item">
         <a class="nav-link ml-lg-2" routerLink="">Início <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link ml-lg-2" routerLink="orcamentos-clientes">Orçamentos e Clientes <fa name="file-text-o" class="ml-2"></fa></a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle ml-md-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Orçamentos e Clientes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#" routerLink="orcamentos-clientes">Cadastrar Orçamento<fa name="file-text-o" class="ml-3"></fa></a>
+          <a class="dropdown-item" href="#" routerLink="visualizar-clientes">Visualizar Clientes<fa name="info-circle" class="ml-3"></fa></a>
+          <a class="dropdown-item" href="#" routerLink="visualizar-orcamentos">Visualizar Orçamentos<fa name="info-circle" class="ml-3"></fa></a>
+        </div>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle ml-md-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

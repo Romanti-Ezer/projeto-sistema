@@ -1,4 +1,4 @@
-<img src="../../assets/customer.jpg" alt="" class="img-fluid mt-5">
+ <img src="../../assets/customer.jpg" alt="" class="img-fluid mt-5">
 
 <div class="text-center bg-dark text-light p-1 p-sm-4 align-self-center" id="body-text">
     <h2>Cadastro</h2>
@@ -6,33 +6,33 @@
 </div>
 
 <div class="container mt-5">
-      
+
     <div class="row">
-    
+
       <div class="col-12 text-center mt-5 mb-3">
 
         <h1 class="display-4"><i class="fa fa-user-plus text-primary" aria-hidden="true"></i> Cadastro de Cliente</h1>
 
       </div>
-    
+
     </div>
 
     <div class="row justify-content-center mb-5">
 
       <div class="col-sm-12 col-md-10 col-lg-8">
 
-        <form>
+        <form (submit)="cadastrarCliente($event)">
 
           <div class="form-row">
 
             <div class="form-group col-sm-6">
               <label for="inputNome">Nome</label>
-              <input type="text" class="form-control" id="inputNome" placeholder="Nome do cliente">
+              <input type="text" class="form-control" id="inputNome" placeholder="Nome do cliente" name="nome" [(ngModel)]="nome" >
             </div>
 
             <div class="form-group col-sm-6">
               <label for="inputSobrenome">Sobrenome</label>
-              <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome do cliente">
+              <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome do cliente" name="sobrenome" [(ngModel)]="sobrenome" >
             </div>
 
           </div>
@@ -41,7 +41,7 @@
 
               <div class="form-group col-sm-12">
                 <label for="inputEmail">E-mail</label>
-                <input type="text" class="form-control" id="inputNome" placeholder="nome@servidor.com">
+                <input type="text" class="form-control" id="inputNome" placeholder="nome@servidor.com" name="email" [(ngModel)]="email">
               </div>
 
             </div>
@@ -50,7 +50,7 @@
 
             <div class="form-group col-sm-12">
               <label for="inputEnd">Endereço</label>
-              <input type="text" class="form-control" id="inputEnd" placeholder="Endereço completo">
+              <input type="text" class="form-control" id="inputEnd" placeholder="Endereço completo" name="endereco" [(ngModel)]="endereco">
             </div>
 
           </div>
@@ -59,12 +59,12 @@
 
             <div class="form-group col-sm-6">
               <label for="inputCidade">Cidade</label>
-              <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
+              <input type="text" class="form-control" id="inputCidade" placeholder="Cidade"  name="cidade" [(ngModel)]="cidade">
             </div>
 
             <div class="form-group col-sm-4">
               <label for="inputEst">Estado</label>
-              <select id="inputEst" class="form-control">
+              <select id="inputEst" class="form-control" name="estado" [(ngModel)]="estado">
                 <option value="" selected>Selecione</option>
                 <option value="AC">Acre</option>
                 <option value="AL">Alagoas</option>
@@ -99,72 +99,72 @@
             <div class="form-group col-sm-2">
 
               <label for="inputCEP">CEP</label>
-              <input type="number" id="inputCEP" class="form-control" placeholder="CEP">
+              <input type="number" id="inputCEP" class="form-control" placeholder="CEP" name="cep" [(ngModel)]="cep" >
 
             </div>
-
+            <button type="submit">Cadastrar cliente</button>
           </div>
 
-     
 
 
 
 
+</form>
 
-
+<form>
           <hr class="my-4">
 
     <!-- Evento -->
 
           <div class="row">
-          
+
             <div class="col-12 text-center mt-3 mb-3">
-      
+
               <h1 class="display-4"><i class="fa fa-globe text-primary" aria-hidden="true"></i> Dados do Serviço</h1>
-      
+
             </div>
-          
+
           </div>
 
             <div class="form-row">
-  
+
               <div class="form-group col-sm-6">
                 <label for="inputNome">Tipo de Evento</label>
                 <input type="text" class="form-control" id="inputNome" placeholder="Nome do cliente">
               </div>
-  
+
               <div class="form-group col-sm-6">
                 <label for="inputSobrenome">Tema</label>
                 <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome do cliente">
               </div>
-  
+
             </div>
-  
+
             <div class="form-row">
-  
+
                 <div class="form-group col-sm-12">
                   <label for="inputEmail">E-mail</label>
                   <input type="text" class="form-control" id="inputNome" placeholder="nome@servidor.com">
                 </div>
-  
+
               </div>
-  
+
             <div class="form-row">
-  
+
               <div class="form-group col-sm-12">
                 <label for="inputEnd">Endereço</label>
                 <input type="text" class="form-control" id="inputEnd" placeholder="Endereço completo">
               </div>
-  
+
             </div>
-  
+
             <div class="form-row">
-  
+
               <div class="form-group col-sm-6">
                 <label for="inputCidade">Cidade</label>
                 <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
               </div>
-  
+
               <div class="form-group col-sm-4">
                 <label for="inputEst">Estado</label>
                 <select id="inputEst" class="form-control">
@@ -198,28 +198,28 @@
                   <option value="TO">Tocantins</option>
                 </select>
               </div>
-  
+
               <div class="form-group col-sm-2">
-  
+
                 <label for="inputCEP">CEP</label>
                 <input type="number" id="inputCEP" class="form-control" placeholder="CEP">
-  
+
               </div>
-  
+
             </div>
-  
-  
+
+
             <div class="form-row">
               <div class="col-sm-12">
                 <button type="submit" class="btn btn-primary">Enviar</button>
                 <a tabindex="0" class="btn btn-secondary ml-2" role="button" data-toggle="popover" data-placement="right" data-trigger="focus" title="Vivamus sit amet maximus leo" data-content="Suspendisse nec venenatis lacus, id interdum mi.">Ajuda</a>
               </div>
             </div>
-  
+
           </form>
-  
+
         </div>
-  
+
       </div>
 
 
