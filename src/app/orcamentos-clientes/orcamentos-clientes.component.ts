@@ -15,41 +15,39 @@ export class OrcamentosClientesComponent implements OnInit {
 
   ngOnInit() {
     document.body.scrollTop = document.documentElement.scrollTop = 0
-
   }
 
   cadastrarCliente(event)
   {
+    let nomeCliente: string = document.getElementsByName('nome')[0].innerText
+    let sobrenomeCliente: string = document.getElementsByName('sobrenome')[0].innerText
+    let emailCliente: string = document.getElementsByName('email')[0].innerText
+    let enderecoCliente: string = document.getElementsByName('endereco')[0].innerText
+    let cidadeCliente: string = document.getElementsByName('cidade')[0].innerText
+    let estadoCliente: string = document.getElementsByName('estado')[0].innerText
+    let cepCliente: string = document.getElementsByName('cep')[0].innerText
+
     event.preventDefault();
     var novoCliente = {
-      nome:this.nome,
-      sobrenome: this.sobrenome,
-      email: this.email,
-      endereco:this.endereco,
-      cidade:this.cidade,
-      estado:this.estado,
-      cep:this.cep
+      nome: nomeCliente,
+      sobrenome: sobrenomeCliente,
+      email: emailCliente,
+      endereco: enderecoCliente,
+      cidade: cidadeCliente,
+      estado: estadoCliente,
+      cep: cepCliente
     }
-    /*
-    alert('nome='+this.nome);
-    alert('sobrenome='+this.sobrenome);
-    alert('email='+this.email);
-    alert('endereco='+this.endereco);
-    alert('cidade='+this.cidade);
-    alert('estado='+this.estado);
-    alert('cep='+this.cep);
-    */
 
     this.serviceCliente.novoCliente(novoCliente)
         .subscribe(cliente => {
-            alert('cliente inserido com sucesso!');
-            this.nome = '';
-            this.sobrenome = '';
-            this.email = '';
-            this.endereco = '';
-            this.cidade = '';
-            this.estado = '';
-            this.cep = '';
+            alert('Cliente inserido com sucesso!');
+            nomeCliente = '';
+            sobrenomeCliente = '';
+            emailCliente = '';
+            enderecoCliente = '';
+            cidadeCliente = '';
+            estadoCliente = '';
+            cepCliente = '';
         });
 
   }

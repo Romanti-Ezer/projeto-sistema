@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceClienteService } from '../services/service-cliente/service-cliente.service';
-import { Cliente } from './Cliente';
+import { Cliente } from '../Cliente';
 
 @Component({
   selector: 'app-visualizar-clientes',
