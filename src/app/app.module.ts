@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { OrcamentosClientesComponent } from './orcamentos-clientes/orcamentos-clientes.component';
 import { VisualizarClientesComponent } from './visualizar-clientes/visualizar-clientes.component';
 import { LoginComponent } from './login/login.component';
+import { CadastroProdutosServicosComponent } from './cadastro-produtos-servicos/cadastro-produtos-servicos.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/login.component';
     FooterComponent,
     OrcamentosClientesComponent,
     VisualizarClientesComponent,
-    LoginComponent
+    LoginComponent,
+    CadastroProdutosServicosComponent
   ],
   imports: [
     BrowserModule,
