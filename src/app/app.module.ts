@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { OrcamentosClientesComponent } from './orcamentos-clientes/orcamentos-clientes.component';
 import { VisualizarClientesComponent } from './visualizar-clientes/visualizar-clientes.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { VisualizarClientesComponent } from './visualizar-clientes/visualizar-cl
     NavbarComponent,
     FooterComponent,
     OrcamentosClientesComponent,
-    VisualizarClientesComponent
+    VisualizarClientesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
