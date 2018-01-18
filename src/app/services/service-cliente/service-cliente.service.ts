@@ -24,4 +24,11 @@ export class ServiceClienteService {
      .map(res => res.json());
    }
 
+   gerarPDF(html)
+   {
+     var headers = new Headers();
+     headers.append('Content-type', 'application/json');
+     return this.http.post('http://localhost:3000/api/gerar_pdf', JSON.stringify(html), {headers:headers})
+       .map(res => res.json());
+   }
 }

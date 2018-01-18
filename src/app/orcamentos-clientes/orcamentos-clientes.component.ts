@@ -52,4 +52,17 @@ export class OrcamentosClientesComponent implements OnInit {
 
   }
 
+  gerarPDF(event)
+  {
+      var html_root = '<html><body><center>IT WORKS!!</center></body></html>'
+      var html_final = {
+        html: html_root
+      }
+      this.serviceCliente.gerarPDF(html_final)
+        .subscribe(pdf =>
+        {
+            alert('PDF gerado com sucesso!');
+        });
+  }
+
 }
