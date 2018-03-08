@@ -19,13 +19,13 @@ export class OrcamentosClientesComponent implements OnInit {
 
   cadastrarCliente(event)
   {
-    let nomeCliente: string = document.getElementsByName('nome')[0].innerText
-    let sobrenomeCliente: string = document.getElementsByName('sobrenome')[0].innerText
-    let emailCliente: string = document.getElementsByName('email')[0].innerText
-    let enderecoCliente: string = document.getElementsByName('endereco')[0].innerText
-    let cidadeCliente: string = document.getElementsByName('cidade')[0].innerText
-    let estadoCliente: string = document.getElementsByName('estado')[0].innerText
-    let cepCliente: string = document.getElementsByName('cep')[0].innerText
+    let nomeCliente: string = (<HTMLInputElement>document.getElementsByName('nome')[0]).value
+    let sobrenomeCliente: string = (<HTMLInputElement>document.getElementsByName('nome')[0]).value
+    let emailCliente: string = (<HTMLInputElement>document.getElementsByName('email')[0]).value
+    let enderecoCliente: string = (<HTMLInputElement>document.getElementsByName('endereco')[0]).value
+    let cidadeCliente: string = (<HTMLInputElement>document.getElementsByName('cidade')[0]).value
+    let estadoCliente: string = (<HTMLInputElement>document.getElementsByName('estado')[0]).value
+    let cepCliente: string = (<HTMLInputElement>document.getElementsByName('cep')[0]).value
 
     event.preventDefault();
     var novoCliente = {

@@ -21,12 +21,13 @@ export class CadastroProdutosServicosComponent implements OnInit {
   {
     //let cod_cliente: string = document.getElementsByTagName('')[0].innerText
     let cod_cliente = 2
-    let txt_nome: string = document.getElementsByName('nomeProduto')[0].value
-    let txt_custo: string = document.getElementsByName('custoProduto')[0].value
-    let txt_despezas_variaveis: string = document.getElementsByName('dvProduto')[0].value
-    let txt_despezas_fixas: string = document.getElementsByName('dfProduto')[0].value
-    let txt_lucro: string = document.getElementsByName('lucroProduto')[0].value
-    let txt_preco_venda: string = document.getElementsByName('pvProduto')[0].value
+    let txt_nome: string = (<HTMLInputElement>document.getElementsByName('nomeProduto')[0]).value
+    console.log(txt_nome)
+    let txt_custo: string = (<HTMLInputElement>document.getElementsByName('custoProduto')[0]).value
+    let txt_despezas_variaveis: string = (<HTMLInputElement>document.getElementsByName('dvProduto')[0]).value
+    let txt_despezas_fixas: string = (<HTMLInputElement>document.getElementsByName('dfProduto')[0]).value
+    let txt_lucro: string = (<HTMLInputElement>document.getElementsByName('lucroProduto')[0]).value
+    let txt_preco_venda: string = (<HTMLInputElement>document.getElementsByName('pvProduto')[0]).value
 
     event.preventDefault();
     var novoProduto = {
